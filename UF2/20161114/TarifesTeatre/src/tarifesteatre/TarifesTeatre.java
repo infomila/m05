@@ -11,7 +11,9 @@ public class TarifesTeatre {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        TarifesTeatre tt = new TarifesTeatre();
+        double preu = tt.getPreu(TipusSeient.SEGON_PIS, 85);
+        System.out.println("El preu és :"+preu);
     }
  
     public enum TipusSeient {
