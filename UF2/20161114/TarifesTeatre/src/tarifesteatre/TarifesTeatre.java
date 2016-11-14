@@ -13,13 +13,7 @@ public class TarifesTeatre {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    /*
-    1 (platea) : 60?
-2 (laterals) : 50?
-3 (primer  pis): 40?
-4 (segon pis): 30?
-
-    */
+ 
     public enum TipusSeient {
         PLATEA(60),
         LATERAL(50),
