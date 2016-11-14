@@ -37,7 +37,7 @@ public boolean pucEntrar(int edat) {
             int edat , 
             boolean coleguilla, 
             float suborn) {
-        if(edat<0||edat>130) throw new RuntimeException();
+        if(edat<0||edat>130||suborn<0) throw new RuntimeException();
         
         if(coleguilla) return true;
         
