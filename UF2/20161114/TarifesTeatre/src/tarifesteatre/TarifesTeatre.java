@@ -20,6 +20,8 @@ public class TarifesTeatre {
  
     
     public double getPreu(TipusSeient tipus, int edat) {
+        
+        if(edat<0||edat>=120) throw new RuntimeException("EdatOutOfBoundsException :-P");
         //<4 anys: no paga
         if(edat<4) return 0;
         // [4-12) anys: 25% descompte sobre el seient.
@@ -35,5 +37,6 @@ public class TarifesTeatre {
             return tipus.getPreu()*0.2;
 
     }
-    
+     
+   
 }
