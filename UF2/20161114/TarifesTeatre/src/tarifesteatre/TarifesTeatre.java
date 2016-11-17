@@ -7,6 +7,8 @@ package tarifesteatre;
  */
 public class TarifesTeatre {
 
+   
+    
     /**
      * @param args the command line arguments
      */
@@ -16,19 +18,6 @@ public class TarifesTeatre {
         System.out.println("El preu és :"+preu);
     }
  
-    public enum TipusSeient {
-        PLATEA(60),
-        LATERAL(50),
-        PRIMER_PIS(40),
-        SEGON_PIS(30);
-        
-        private double mPreu;
-        TipusSeient (double preu) {
-            mPreu = preu;
-        }
-        public double getPreu(){ return mPreu;}
-
-    }
     
     public double getPreu(TipusSeient tipus, int edat) {
         //<4 anys: no paga
@@ -43,7 +32,7 @@ public class TarifesTeatre {
         if(tipus==TipusSeient.PLATEA) 
             return tipus.getPreu()*0.5;
         else 
-            return tipus.getPreu()*0.8;
+            return tipus.getPreu()*0.2;
 
     }
     
