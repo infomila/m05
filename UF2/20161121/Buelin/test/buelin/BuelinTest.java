@@ -145,7 +145,7 @@ public class BuelinTest {
         
         
         //-----------------------------------------------------------------------
-        //          MALETES
+        //          AMB TARJA DE CRÈDIT
         //-----------------------------------------------------------------------
         s = b.getSobrecostPerEquipatge(null, 0, new int[]{15,15}, true);
         assertEquals(0, s, tolerancia);          
