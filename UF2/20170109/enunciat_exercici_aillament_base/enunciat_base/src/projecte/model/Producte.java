@@ -1,5 +1,6 @@
 package projecte.model;
 
+import projecte.bd.IProducteBD;
 import projecte.bd.ProducteBD;
 import projecte.missatgeria.Missatgeria;
 
@@ -15,6 +16,14 @@ public class Producte {
     private int stock;
     private double preu;
     private static int MINIM_STOCK = 5;
+
+    public Producte(int id, String nom, int stock, double preu) {
+        this.id = id;
+        this.nom = nom;
+        this.stock = stock;
+        this.preu = preu;
+    }
+    
     
     
     public Producte( int codi ) throws Exception{
@@ -54,7 +63,7 @@ public class Producte {
                     "Atenció, producte "+id+" amb només "+stock+" unitats.");
         
         
-        ProducteBD pBD = new ProducteBD();
+        IProducteBD pBD = ProducteBD.getInstance();
         pBD.updateStock(this);
         
     }

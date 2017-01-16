@@ -4,11 +4,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/H:/Docencia/Material_Moduls/M5_ED/UF2/NF1_Disseny_i_realitzacio_de_proves/exercicis/exercicis_aillament_test_unitari/enunciat_base/src/DemoPrograma.java</file>
-            <file>file:/H:/Docencia/Material_Moduls/M5_ED/UF2/NF1_Disseny_i_realitzacio_de_proves/exercicis/exercicis_aillament_test_unitari/enunciat_base/src/projecte/bd/GestorConnexions.java</file>
-            <file>file:/H:/Docencia/Material_Moduls/M5_ED/UF2/NF1_Disseny_i_realitzacio_de_proves/exercicis/exercicis_aillament_test_unitari/enunciat_base/src/projecte/model/Compra.java</file>
-            <file>file:/H:/Docencia/Material_Moduls/M5_ED/UF2/NF1_Disseny_i_realitzacio_de_proves/exercicis/exercicis_aillament_test_unitari/enunciat_base/src/projecte/bd/ProducteBD.java</file>
-            <file>file:/H:/Docencia/Material_Moduls/M5_ED/UF2/NF1_Disseny_i_realitzacio_de_proves/exercicis/exercicis_aillament_test_unitari/enunciat_base/src/projecte/model/Producte.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/missatgeria/Missatgeria.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/model/Producte.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/model/Compra.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/bd/ProducteBD.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/bd/IProducteBD.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/src/projecte/bd/ProducteBDFals.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170109/enunciat_exercici_aillament_base/enunciat_base/test/projecte/model/CompraTest.java</file>
         </group>
     </open-files>
 </project-private>

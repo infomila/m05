@@ -9,6 +9,7 @@ import projecte.model.Producte;
 import static org.junit.Assert.*;
 //import java.util.*;
 import org.junit.*;
+import projecte.bd.ProducteBD;
 
 /**
  *
@@ -40,6 +41,11 @@ public class CompraTest {
      */
     @Test
     public void testConfirmarCompra() throws Exception{
+        
+        
+            ProducteBD.setModeTest(true);
+        
+            //------------------------------------------
             Compra compra = new Compra(4423);
 
             // ==========================================================================

@@ -57,10 +57,12 @@ public class Compra {
                 linia = new LiniaCompra(p,unitats);
                 linies.add(linia);
                 // modifiquem l'stock
-                p.variacioStock(-unitats);
+                
             } else {
                 linia.setQuantitat(linia.getQuantitat()+unitats);
             }
+            
+            p.variacioStock(-unitats);
             
             preuTotal+=linia.getImport();
             return true;

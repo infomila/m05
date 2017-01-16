@@ -14,8 +14,23 @@ import java.sql.Statement;
  *
  * @author bernat
  */
-public class ProducteBD {
+public class ProducteBD implements IProducteBD {
+
+    private static boolean mModeTest = false;
     
+    public static IProducteBD getInstance() {
+        if(mModeTest) {
+            return new ProducteBDFals();
+        } else {
+            return new ProducteBD();
+        }
+    }
+    
+    public static void setModeTest(boolean pModeTest) {
+        mModeTest = pModeTest;
+    }
+    
+    @Override
     public  void getProducteFromBD(int id, Producte p) throws Exception{
 
         Connection con=null;
@@ -48,6 +63,7 @@ public class ProducteBD {
                 GestorConnexions.tanca(con);
         }		
     }
+    @Override
     public   void updateStock(Producte p)  throws Exception{
         Connection con=null;
         try {
