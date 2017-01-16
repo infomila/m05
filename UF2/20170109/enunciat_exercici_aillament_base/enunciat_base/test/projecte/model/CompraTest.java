@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 //import java.util.*;
 import org.junit.*;
 import projecte.bd.ProducteBD;
+import projecte.missatgeria.MissatgeriaFaker;
 
 /**
  *
@@ -72,7 +73,7 @@ public class CompraTest {
             assertEquals(compra.getNumeroLinies(), 2);    
             assertEquals( compra.getPreuTotal(), 5 * p1.getPreu() +  3 * p3.getPreu() , 0.0001);
 
-            compra.confirmarCompra();
+            compra.confirmarCompra(new MissatgeriaFaker());
             
          /*   
         }catch(Exception e)

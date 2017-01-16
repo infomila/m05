@@ -3,6 +3,7 @@ package projecte.model;
 import projecte.bd.IProducteBD;
 import projecte.bd.ProducteBD;
 import projecte.missatgeria.Missatgeria;
+import projecte.missatgeria.iMissatgeria;
 
 /**
  * Classe del Model de Domini
@@ -55,9 +56,9 @@ public class Producte {
      this.stock = nouStock;
     }
 
-    public void desarCanvisStock() throws Exception
+    public void desarCanvisStock(iMissatgeria m) throws Exception
     {
-        Missatgeria m = new Missatgeria();
+        //Missatgeria m = new Missatgeria();        
         if(stock < MINIM_STOCK ) m.enviar(
                     Missatgeria.MAGATZEM,
                     "Atenció, producte "+id+" amb només "+stock+" unitats.");

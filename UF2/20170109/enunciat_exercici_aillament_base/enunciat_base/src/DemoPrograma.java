@@ -47,6 +47,6 @@ public class DemoPrograma {
             compra.afegirProducte(p3, 3);
             System.out.println(compra);
             
-            compra.confirmarCompra();
+            compra.confirmarCompra(new Missatgeria());
     }
 }

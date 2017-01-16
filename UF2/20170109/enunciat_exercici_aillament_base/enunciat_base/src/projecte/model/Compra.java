@@ -6,6 +6,7 @@ package projecte.model;
 
 
 import java.util.*;
+import projecte.missatgeria.iMissatgeria;
 
 /**
  *
@@ -82,11 +83,11 @@ public class Compra {
         return null;
     }
     
-    public void confirmarCompra() throws Exception
+    public void confirmarCompra(iMissatgeria m) throws Exception
     {
         // decrementar els stocks dels productes
         for(LiniaCompra lc:linies){
-            lc.getProducte().desarCanvisStock();
+            lc.getProducte().desarCanvisStock(m);
         }
         
     }
