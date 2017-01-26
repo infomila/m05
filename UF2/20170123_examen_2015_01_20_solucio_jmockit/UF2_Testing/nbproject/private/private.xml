@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/BERNAT/Docencia/Material_Moduls/M5_ED/examens_14_15/UF2/Testing/UF2_Testing/test/net/iesmila/ED/UF2/fabrica/LectorTest.java</file>
-            <file>file:/C:/Users/BERNAT/Docencia/Material_Moduls/M5_ED/examens_14_15/UF2/Testing/UF2_Testing/src/net/iesmila/ED/UF2/capsa_blanca/TheIncredibleMachine.java</file>
-            <file>file:/C:/Users/BERNAT/Docencia/Material_Moduls/M5_ED/examens_14_15/UF2/Testing/UF2_Testing/src/net/iesmila/ED/UF2/fabrica/Lector.java</file>
-            <file>file:/C:/Users/BERNAT/Docencia/Material_Moduls/M5_ED/examens_14_15/UF2/Testing/UF2_Testing/src/net/iesmila/ED/UF2/capsa_negra/Expenedora.java</file>
-            <file>file:/C:/Users/BERNAT/Docencia/Material_Moduls/M5_ED/examens_14_15/UF2/Testing/UF2_Testing/src/net/iesmila/ED/UF2/capsa_negra/TipusCanvi.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170123_examen_2015_01_20_solucio_jmockit/UF2_Testing/src/net/iesmila/ED/UF2/fabrica/Lector.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170123_examen_2015_01_20_solucio_jmockit/UF2_Testing/src/net/iesmila/ED/UF2/fabrica/DiccionariOnline.java</file>
+            <file>file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170123_examen_2015_01_20_solucio_jmockit/UF2_Testing/test/net/iesmila/ED/UF2/fabrica/LectorTest.java</file>
+            <file>jar:file:/E:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170123_examen_2015_01_20_solucio_jmockit/UF2_Testing/lib/jmockit.jar!/LICENSE.txt</file>
         </group>
     </open-files>
 </project-private>
