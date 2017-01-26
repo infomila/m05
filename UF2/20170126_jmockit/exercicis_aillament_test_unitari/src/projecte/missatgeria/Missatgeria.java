@@ -32,12 +32,13 @@ public class Missatgeria {
             return emails.get(departament);
     }
     
-    public void enviar(String departament, String missatge ) throws Exception
+    public boolean enviar(String departament, String missatge ) throws Exception
     {
         String email = getAdrecaEmail(departament);
         if(email==null) throw new Exception("Departament no existent");
         Email e = new Email();
         e.enviarEmail(email, "Missatge Intern" ,missatge);
+        return true;
     }
     
 }

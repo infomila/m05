@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - Compra.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>exercicis_aillament_test_unitari\src\projecte\model\Compra.java</caption>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package projecte.model;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import java.util.*;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ *
+ * @author bernat
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Compra {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private int <span class='instance uncovered' title='Reads: 0 Writes: 1'>codi</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private Date <span class='instance uncovered' title='Reads: 0 Writes: 1'>data</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private List&lt;LiniaCompra> <span class='instance covered' title='Reads: 9 Writes: 1'>linies</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private double <span class='instance covered' title='Reads: 4 Writes: 3'>preuTotal</span>;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public Compra( int codi) throws Exception</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l22s0'>    {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l23s0'>        setCodi(codi);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l24s0'>        data = new Date();   </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l25s0'>        linies = new ArrayList&lt;LiniaCompra>();   </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l26s0'>        preuTotal=0;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l27s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public boolean eliminarProducte( Producte p ) throws Exception</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l31s0 l32s0 l33s0 l38s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l31s0 l32s0 l40s0')">B: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l31s0'>        LiniaCompra linia= buscarLiniaCompraPerProducte(p);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>        <span id='l32s0' title='Executions: 0' class='uncovered'>if(linia!=null)</span> <span id='l32s1' title='Executions: 0' class='uncovered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l33s0'>            preuTotal-=linia.getImport();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>34</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l34s0'>            linies.remove(linia);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='comment'>            // modifiquem l'stock</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l36s0'>            p.variacioStock(+ linia.getQuantitat());</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l38s0'>            return true;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l40s0'>        return false;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public boolean afegirProducte( Producte p, int unitats )</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // verifiquem que hi hagi producte</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>4</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#669900' onclick='hidePath()'>Path coverage: 3/5</span>
+        <span class='uncovered' onclick="showPath(this,'l45s0 l45s1')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l45s0 l48s0 l48s1')">B: 1</span>
+        <span class='covered' onclick="showPath(this,'l45s0 l48s0 l52s0 l52s1')">C: 1</span>
+        <span class='uncovered' onclick="showPath(this,'l45s0 l48s0 l52s0 l55s0 l56s0 l62s0 l65s0 l66s0')">D: 0</span>
+        <span class='covered' onclick="showPath(this,'l45s0 l48s0 l52s0 l55s0 l56s0 l57s0 l65s0 l66s0')">E: 2</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>4</td>
+      <td><pre class='prettyprint jmp'>        <span id='l45s0' title='Executions: 4' class='covered'>if( p==null )</span> <span id='l45s1' title='Executions: 0' class='uncovered'>return false;</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>47</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // verifiquem que les unitats siguin positives</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>4</td>
+      <td><pre class='prettyprint jmp'>        <span id='l48s0' title='Executions: 4' class='covered'>if(unitats &lt;0)</span> <span id='l48s1' title='Executions: 1' class='covered'>return false;</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // verifiquem que hi hagi stock suficient</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>        <span id='l52s0' title='Executions: 3' class='covered'>if(p.getStock()&lt;unitats) return false;</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        try {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l55s0'>            LiniaCompra linia= buscarLiniaCompraPerProducte(p);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>            <span id='l56s0' title='Executions: 2' class='covered'>if(linia==null)</span> <span id='l56s1' title='Executions: 2' class='covered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l57s0'>                linia = new LiniaCompra(p,unitats);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l58s0'>                linies.add(linia);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='comment'>                // modifiquem l'stock</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l60s0'>                p.variacioStock(-unitats);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>61</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            } else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l62s0'>                linia.setQuantitat(linia.getQuantitat()+unitats);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>65</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l65s0'>            preuTotal+=linia.getImport();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>66</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l66s0'>            return true;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>68</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l68s0'>        } catch(Exception e){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>69</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l69s0'>            e.printStackTrace();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>70</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l71s0'>        return false;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>74</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public LiniaCompra buscarLiniaCompraPerProducte(Producte p)</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>75</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#55aa00' onclick='hidePath()'>Path coverage: 2/3</span>
+        <span class='uncovered' onclick="showPath(this,'l76s0 l76s1 l78s0 l78s1')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l76s0 l80s0')">B: 1</span>
+        <span class='covered' onclick="showPath(this,'l76s0 l76s1 l78s0 l79s0 l80s0')">C: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>76</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>        <span id='l76s0' title='Executions: 2' class='covered'>for (LiniaCompra lc:linies)</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>77</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>            <span id='l78s0' title='Executions: 1' class='covered'>if(lc.getProducte().equals(p)) return lc;</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l79s0'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l80s0'>        return null;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>81</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>83</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void confirmarCompra() throws Exception</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>85</td><td>&nbsp;</td>
+      <td><pre class='comment'>        // decrementar els stocks dels productes</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>1</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l86s0 l90s0')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l86s0 l86s1 l90s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>86</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>        <span id='l86s0' title='Executions: 1' class='covered'>for(LiniaCompra lc:linies)</span><span id='l86s1' title='Executions: 2' class='covered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l87s0'>            lc.getProducte().desarCanvisStock();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>88</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l88s0'>        }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>90</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l90s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>93</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public int getNumeroLinies(){</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>94</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l94s0'>        return linies.size();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>95</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>96</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public int getCodi() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>97</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l97s0'>        return codi;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>98</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>100</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public final void setCodi(int codi) throws Exception {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>1</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l101s0 l101s1')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l101s0 l102s0 l103s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>101</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>        <span id='l101s0' title='Executions: 1' class='covered'>if(codi&lt;0)</span> <span id='l101s1' title='Executions: 0' class='uncovered'>throw new Exception("La compra no es pot crear amb un codi negatiu");</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>102</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l102s0'>        this.codi = codi;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>103</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l103s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>105</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public Date getData() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>106</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l106s0'>        return data;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>107</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>109</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void setData(Date data) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>110</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l110s0'>        this.data = data;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>111</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l111s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>113</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public double getPreuTotal() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>114</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l114s0'>        return preuTotal;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>115</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>117</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    @Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>118</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public String toString() {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>0</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#ff0000' onclick='hidePath()'>Path coverage: 0/2</span>
+        <span class='uncovered' onclick="showPath(this,'l119s0 l123s0 l127s0 l130s0')">A: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l119s0 l123s0 l123s1 l127s0 l130s0')">B: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>119</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l119s0'>        String s = "----------------------------------" +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>120</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l120s0'>        s += "Compra: " + "codi=" + codi + ", data=" + data  +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>121</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l121s0'>        int i=1;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>123</td><td class='count'>0</td>
+      <td><pre class='prettyprint jmp'>        <span id='l123s0' title='Executions: 0' class='uncovered'>for(LiniaCompra l</span> : <span id='l123s1' title='Executions: 0' class='uncovered'>linies)</span>  </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>124</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l124s0'>            s += "\t"+i + ":" + l.toString() +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>125</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l125s0'>            i++;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>126</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l126s0'>        }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>127</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l127s0'>        s += "----------------------------------" +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>128</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l128s0'>        s += "Total=" + preuTotal  +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>129</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l129s0'>        s += "----------------------------------" +"\n";</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>130</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l130s0'>        return s;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>131</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>133</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

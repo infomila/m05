@@ -23,6 +23,14 @@ public class Producte {
         pBD.getProducteFromBD(codi, this);
     }
 
+    public Producte(int id, String nom, int stock, double preu) {
+        this.id = id;
+        this.nom = nom;
+        this.stock = stock;
+        this.preu = preu;
+    }
+    
+    
     public static int getStockMinim() {
         return MINIM_STOCK;
     }
@@ -49,9 +57,15 @@ public class Producte {
     public void desarCanvisStock() throws Exception
     {
         Missatgeria m = new Missatgeria();
-        if(stock < MINIM_STOCK ) m.enviar(
+        if(stock < MINIM_STOCK ) {
+            
+           boolean ok = m.enviar(
                     Missatgeria.MAGATZEM,
                     "Atenció, producte "+id+" amb només "+stock+" unitats.");
+            if(!ok) {
+                throw new Exception();
+            }
+        }
         
         
         ProducteBD pBD = new ProducteBD();

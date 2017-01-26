@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JMockit Coverage Report - Producte.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>exercicis_aillament_test_unitari\src\projecte\model\Producte.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package projecte.model;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import projecte.bd.ProducteBD;
+import projecte.missatgeria.Missatgeria;
+</div><span>import ...</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td class='comment' onclick='showHideLines(this)'><div>/**
+ * Classe del Model de Domini
+ * @author Bernat
+ *
+ */</div><span>/*...*/</span></td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Producte {</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>13</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private int <span class='instance uncovered' title='Reads: 5 Writes: 12'>id</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private String <span class='instance uncovered' title='Reads: 2 Writes: 10'>nom</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private int <span class='instance uncovered' title='Reads: 16 Writes: 14'>stock</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    private double <span class='instance uncovered' title='Reads: 7 Writes: 10'>preu</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l17s0'>    private static int <span class='static covered' title='Reads: 2 Writes: 0'>MINIM_STOCK</span> = 5;</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l20s0'>    public Producte( int codi ) throws Exception{</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l21s0'>        this.id = codi;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l22s0'>        ProducteBD pBD  = new ProducteBD();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l23s0'>        pBD.getProducteFromBD(codi, this);</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l24s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l26s0'>    public Producte(int id, String nom, int stock, double preu) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l27s0'>        this.id = id;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l28s0'>        this.nom = nom;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l29s0'>        this.stock = stock;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l30s0'>        this.preu = preu;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td class='count'>8</td>
+      <td><pre class='prettyprint covered' id='l31s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>34</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public static int getStockMinim() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l35s0'>        return MINIM_STOCK;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public int getId() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l38s0'>            return id;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void setId(int id) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l41s0'>            this.id = id;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l42s0'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public String getNom() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l44s0'>            return nom;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void setNom(String nom) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l47s0'>            this.nom = nom;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l48s0'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public int getStock() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td class='count'>9</td>
+      <td><pre class='prettyprint covered' id='l50s0'>        return stock;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void setStock(int nouStock)</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l54s0'>     this.stock = nouStock;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td class='count'>4</td>
+      <td><pre class='prettyprint covered' id='l55s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>57</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void desarCanvisStock() throws Exception</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    {</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#55aa00' onclick='hidePath()'>Path coverage: 2/3</span>
+        <span class='uncovered' onclick="showPath(this,'l59s0 l60s0 l62s0 l65s0 l66s0')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l59s0 l60s0 l71s0 l74s0')">B: 1</span>
+        <span class='covered' onclick="showPath(this,'l59s0 l60s0 l62s0 l65s0 l71s0 l74s0')">C: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l59s0'>        Missatgeria m = new Missatgeria();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>60</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>        <span id='l60s0' title='Executions: 2' class='covered'>if(stock &lt; MINIM_STOCK )</span> <span id='l60s1' title='Executions: 1' class='covered'>{</span></pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>62</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered' id='l62s0'>           boolean ok = m.enviar(</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>63</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>                    Missatgeria.MAGATZEM,</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>64</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>                    "Atenció, producte "+id+" amb només "+stock+" unitats.");</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>65</td><td class='count'>1</td>
+      <td><pre class='prettyprint jmp'>            <span id='l65s0' title='Executions: 1' class='covered'>if(!ok)</span> <span id='l65s1' title='Executions: 0' class='uncovered'>{</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>66</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l66s0'>                throw new Exception();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>67</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>            }</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>68</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>        }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>71</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l71s0'>        ProducteBD pBD = new ProducteBD();</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>72</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l72s0'>        pBD.updateStock(this);</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>74</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l74s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>76</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void variacioStock(int increment) throws Exception{</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 1/2</span>
+        <span class='uncovered' onclick="showPath(this,'l78s0 l78s1')">A: 0</span>
+        <span class='covered' onclick="showPath(this,'l78s0 l79s0 l80s0')">B: 2</span>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>78</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>        <span id='l78s0' title='Executions: 2' class='covered'>if(stock+increment&lt;0)</span> <span id='l78s1' title='Executions: 0' class='uncovered'>throw new Exception("Variació d'estock no possible, unitats insufucients");</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>79</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l79s0'>        this.stock += increment;    </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>80</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l80s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>82</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public double getPreu() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>83</td><td class='count'>7</td>
+      <td><pre class='prettyprint covered' id='l83s0'>        return preu;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>84</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>86</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>    public void setPreu(double preu) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>87</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l87s0'>        this.preu = preu;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>88</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered' id='l88s0'>    }</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>91</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

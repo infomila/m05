@@ -3,6 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170126_jmockit/exercicis_aillament_test_unitari/src/projecte/model/Producte.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170126_jmockit/exercicis_aillament_test_unitari/src/projecte/missatgeria/Email.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170126_jmockit/exercicis_aillament_test_unitari/src/projecte/missatgeria/Missatgeria.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170126_jmockit/exercicis_aillament_test_unitari/test/projecte/model/CompraTest.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20170126_jmockit/exercicis_aillament_test_unitari/src/projecte/bd/ProducteBD.java</file>
+        </group>
     </open-files>
 </project-private>

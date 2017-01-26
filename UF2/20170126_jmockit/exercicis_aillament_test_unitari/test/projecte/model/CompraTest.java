@@ -4,11 +4,19 @@
  */
 package projecte.model;
 
+import java.util.HashMap;
+import mockit.Expectations;
+import mockit.Mock;
+import mockit.MockUp;
+import mockit.Mocked;
+import mockit.NonStrictExpectations;
 import projecte.model.Compra;
 import projecte.model.Producte;
 import static org.junit.Assert.*;
 //import java.util.*;
 import org.junit.*;
+import projecte.bd.ProducteBD;
+import projecte.missatgeria.Missatgeria;
 
 /**
  *
@@ -34,12 +42,69 @@ public class CompraTest {
     @After
     public void tearDown() {
     }
-
+ 
+    @Mocked
+    Missatgeria mMissatgeria;
+        
     /**
      * Test of afegirProducte method, of class Compra.
      */
     @Test
     public void testConfirmarCompra() throws Exception{
+        
+            //---------------------------------------------
+            // Bloc Expectations
+            //---------------------------------------------
+            new NonStrictExpectations() {{
+                //mMissatgeria.enviar("Informatica", anyString);
+                //returns (false);
+                
+                mMissatgeria.enviar(anyString, anyString);
+                returns (true);
+                
+            }};
+            //----------------------------------------------
+            new MockUp<ProducteBD>(){
+
+                private HashMap<Integer, Producte> mProductes;
+
+                @Mock
+                public void $init() {
+
+                    mProductes = new HashMap<Integer, Producte> ();
+                    Producte p1 = new Producte(1, "Col", 5, 23.12);
+                    mProductes.put(1, p1);
+
+                    Producte p3 = new Producte(3, "Tomàquets", 19, 54.3);
+                    mProductes.put(3, p3);        
+                }
+
+
+                @Mock
+                public void getProducteFromBD(int id, Producte p) throws Exception {
+
+                    Producte pBd = mProductes.get(id);
+                    if(pBd!=null) {
+                        p.setId(pBd.getId());
+                        p.setNom(pBd.getNom());
+                        p.setStock(pBd.getStock());
+                        p.setPreu(pBd.getPreu());
+                    }
+         
+                }
+
+                @Mock
+                public void updateStock(Producte p) throws Exception {
+
+                    Producte pBd = mProductes.get(p.getId());
+                    if(pBd!=null) {                
+                        pBd.setStock(p.getStock());
+                    }            
+                }
+
+            };
+            //---------------------------------------------
+            //---------------------------------------------
             Compra compra = new Compra(4423);
 
             // ==========================================================================
