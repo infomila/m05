@@ -26,26 +26,23 @@ public class Rental {
 	
 	
     public double getAmount() {
-        double thisAmount;
-        //determine amounts for each line
-        switch (this.getMovie().getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount = 2;
-                if (this.getDaysRented() > 2)
-                    thisAmount += (this.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount = this.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount = 1.5;
-                if (this.getDaysRented() > 3)
-                    thisAmount += (this.getDaysRented() - 3) * 1.5;
-                break;
-            default:
-                throw new RuntimeException("INVALID PRICE CODE");
+        
+        return this.getMovie().getPrice(this.getDaysRented());
+         
+    }
+    
+    public int getPoints(){
+        // add frequent renter points
+        int totalPoints=1; //
+
+
+        // add bonus for a two day new release rental
+        if ((this.getMovie().getPriceCode() == Movie.NEW_RELEASE) && 
+                this.getDaysRented() > 1) {
+                totalPoints++;
         }
-        return thisAmount;
+        
+        return totalPoints;
     }
 	
 }
