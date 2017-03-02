@@ -1,57 +1,71 @@
 package refactoring;
 
 // From book: 'Refactoring' by Martin Fowler
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 // This is the original code before refactoring begins
+public class Movie {
 
-public abstract class Movie {
 
-	public static final int CHILDRENS = 2;
-	public static final int NEW_RELEASE = 1;
-	public static final int REGULAR = 0;
-	
-	private String _title;
-	private int _priceCode;
-	
-	public Movie(String title, int priceCode) {
-		_title = title;
-		_priceCode = priceCode;
-	}
-	
-	public int getPriceCode() {
-		return _priceCode;
-	}
+    private String _title;
+    private MovieTypeEnum _movieTypeCode;
+    private MovieType _movieType;
 
-	public void setPriceCode(int arg) {
-		_priceCode = arg;
-	}
-	public String getTitle() {
-		return _title;
-	}
+    public Movie(String title, MovieTypeEnum movieTypeCode) {
+        _title = title;
+        _movieTypeCode = movieTypeCode;
+        updateMovieType(movieTypeCode);
+    }
 
-        abstract double getPrice(int daysRented) ;
-        
-    /*double getPrice(int daysRented) {
-        double thisAmount;
-        //determine amounts for each line
-        switch (this.getPriceCode()) {
-            case Movie.REGULAR:
-                thisAmount = 2;
-                if (daysRented > 2)
-                    thisAmount += (daysRented - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                thisAmount = daysRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                thisAmount = 1.5;
-                if (daysRented > 3)
-                    thisAmount += (daysRented - 3) * 1.5;
-                break;
-            default:
-                throw new RuntimeException("INVALID PRICE CODE");
+    public void updateMovieType(MovieTypeEnum movieTypeCode) {
+        try {
+            
+                         
+            _movieType = (MovieType) movieTypeCode.getC().newInstance();
+            
+            /*Class [] movie_types_classes = new Class[] {
+                MovieType_Children.class,
+                MovieType_NewRelease.class,
+                MovieType_Regular.class
+            };
+            _movieType = (MovieType) movie_types_classes[movieTypeCode.ordinal()].newInstance();
+            */
+            /*
+            switch (movieTypeCode) {
+            case REGULAR:
+            _movieType = new MovieType_Regular();
+            break;
+            case NEW_RELEASE:
+            _movieType = new MovieType_NewRelease();
+            break;
+            case CHILDRENS:
+            _movieType = new MovieType_Children();
+            break;
+            }*/
+        } catch (InstantiationException ex) {
+            Logger.getLogger(Movie.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(Movie.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return thisAmount; 
-    }*/
-	
-	
+    }
+
+    public MovieTypeEnum getMovieTypeCode() {
+        return _movieTypeCode;
+    }
+
+    public void setMovieTypeCode(MovieTypeEnum arg) {
+        _movieTypeCode = arg;
+        updateMovieType(_movieTypeCode);
+    }
+
+    public String getTitle() {
+        return _title;
+    }
+
+    double getPrice(int daysRented){
+        return _movieType.getPrice(daysRented);
+    }
+ 
 }

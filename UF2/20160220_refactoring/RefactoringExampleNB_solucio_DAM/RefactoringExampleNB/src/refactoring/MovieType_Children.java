@@ -4,14 +4,11 @@ package refactoring;
  *
  * @author BERNAT
  */
-public class MovieChildren extends Movie{
+public class MovieType_Children extends MovieType{
 
-    public MovieChildren(String title) {
-        super(title, Movie.CHILDRENS);
-    }
 
     @Override
-    double getPrice(int daysRented) {
+    public double getPrice(int daysRented) {
         double thisAmount = 1.5;
         if (daysRented > 3){
                     thisAmount += (daysRented - 3) * 1.5;
