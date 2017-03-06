@@ -5,12 +5,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/Movie.java</file>
-            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieRegular.java</file>
-            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieNewRelease.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieType_Children.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieType.java</file>
             <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/Customer.java</file>
-            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/Rental.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieType_Regular.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieTypeEnum.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieType_NewRelease.java</file>
             <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/test/refactoring/CustomerTest.java</file>
-            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/MovieChildren.java</file>
+            <file>file:/F:/Docencia/Material_Moduls/M5_ED/repoGit/m05/UF2/20160220_refactoring/RefactoringExampleNB_solucio_DAM/RefactoringExampleNB/src/refactoring/Rental.java</file>
         </group>
     </open-files>
 </project-private>
