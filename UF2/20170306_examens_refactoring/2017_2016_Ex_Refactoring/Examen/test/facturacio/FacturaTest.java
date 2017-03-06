@@ -22,10 +22,10 @@ public class FacturaTest {
                
         Producte p1, p2, p3, p4;
         
-        p1 = new Producte(1, "Patates", BigDecimal.valueOf(3.20), Producte.NORMAL, 4);
-        p2 = new Producte(2, "Ous", BigDecimal.valueOf(10.50), Producte.EN_PROMOCIO_2X1, 8);
-        p3 = new Producte(3, "Ous caducats", BigDecimal.valueOf(10.50), Producte.EN_LIQUIDACIO, 8 );
-        p4 = new Producte(4, "iPad3", BigDecimal.valueOf(550.20), Producte.NOVETAT, 18);
+        p1 = new Producte(1, "Patates", BigDecimal.valueOf(3.20), TipusProdEnum.NORMAL, 4);
+        p2 = new Producte(2, "Ous", BigDecimal.valueOf(10.50), TipusProdEnum.EN_PROMOCIO_2X1, 8);
+        p3 = new Producte(3, "Ous caducats", BigDecimal.valueOf(10.50), TipusProdEnum.EN_LIQUIDACIO, 8 );
+        p4 = new Producte(4, "iPad3", BigDecimal.valueOf(550.20), TipusProdEnum.NOVETAT, 18);
             
         
         Factura f = new Factura(1);

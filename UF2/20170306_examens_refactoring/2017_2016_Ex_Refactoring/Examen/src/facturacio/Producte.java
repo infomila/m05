@@ -16,18 +16,14 @@ public class Producte {
     private String nom;
     private BigDecimal preu;
     private double tipusIva;
-    private int tipus;
+    private TipusProdEnum tipus;
     
     /**
      *  tipus de productes vàlids
      */
-    public static final int EN_PROMOCIO_2X1   = 0;
-    public static final int EN_LIQUIDACIO     = 1;
-    public static final int NOVETAT           = 2;
-    public static final int NORMAL            = 3;
-    
 
-    public Producte(int codi, String nom, BigDecimal preu, int tipus, double tipusIva) {
+
+    public Producte(int codi, String nom, BigDecimal preu, TipusProdEnum tipus, double tipusIva) {
         this.codi = codi;
         this.nom = nom;
         this.preu = preu;
@@ -51,7 +47,7 @@ public class Producte {
         this.codi = codi;
     }
 
-    public double getPreu() {
+    public double getPreuBase() {
         return preu.doubleValue();
     }
 
@@ -59,11 +55,11 @@ public class Producte {
         this.preu = preu;
     }
 
-    public int getTipus() {
+    public TipusProdEnum getTipus() {
         return tipus;
     }
 
-    public void setTipus(int tipus) {
+    public void setTipus(TipusProdEnum tipus) {
         this.tipus = tipus;
     }
     
@@ -73,6 +69,54 @@ public class Producte {
 
     public void setTipusIva(double tipusIva) {
         this.tipusIva = tipusIva;
+    }
+    
+    public double getPreu(int unitats) {
+        
+        double preuProducte = getPreuBase();
+        
+            switch (getTipus()) {
+                case EN_LIQUIDACIO: {
+                    return  preuProducte * 0.30;
+    
+                }
+                case EN_PROMOCIO_2X1: {
+                    int unitatsPagades = (int) (unitats / 2);
+                    // Si el nombre  de productes es senar, cal incrementar en un les unitats pagades
+                    unitatsPagades += unitats % 2;
+                    return preuProducte * (unitatsPagades / (double) unitats);
+                    
+                }
+                case NOVETAT: {
+                    return preuProducte * 1.30;
+
+                }
+                case NORMAL: {
+                    double descompteRappel = 0;
+                    if (unitats >= 50 && unitats < 100) {
+                        descompteRappel = 10;
+                    } else if (unitats >= 100 && unitats < 200) {
+                        descompteRappel = 20;
+                    } else if (unitats >= 200) {
+                        descompteRappel = 30;
+                    }
+                    return preuProducte * (1 - descompteRappel / 100);
+
+                }
+                default:
+                    throw new RuntimeException();
+            }
+    }
+
+    public String getDescripcioTipus() {
+        switch (getTipus()) {
+                case EN_LIQUIDACIO:    return  "LIQUIDACIO";
+                case EN_PROMOCIO_2X1:  return  "2X1";
+                case NOVETAT:          return "NOVETAT";
+                case NORMAL:           return "NORMAL"; 
+                default:
+                    throw new RuntimeException();
+        }
     }
     
 }
