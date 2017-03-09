@@ -9,7 +9,7 @@ package solucio;
  *
  * @author Professor
  */
-public class Forma {
+public abstract class Forma {
 
     public static final int QUADRAT = 1;
     public static final int CERCLE = 2;
@@ -33,7 +33,11 @@ public class Forma {
         return tipusForma;
     }
 
-    public String getNom() {
+    public abstract String getNom();
+    
+    public abstract double getArea();
+    
+    /*public String getNom() {
         switch (tipusForma) {
             case Forma.QUADRAT:                         return "Quadrat";
             case Forma.CERCLE:                          return "Cercle";
@@ -50,6 +54,6 @@ public class Forma {
             case Forma.TRIANGLE_RECTANGLE_ISOSCELES: return mida * mida / 2.0; 
             default:throw new RuntimeException("Tipus no existent.");
         }
-    }
+    }*/
 
 }
