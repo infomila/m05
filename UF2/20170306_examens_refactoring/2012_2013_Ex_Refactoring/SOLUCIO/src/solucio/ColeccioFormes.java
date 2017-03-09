@@ -40,13 +40,18 @@ public class ColeccioFormes {
     }
 
     public String informeFormes() {
-        int quadrats = 0, cercles = 0, triangles = 0, total = 0;
-        double areaQuadrats = 0, areaCercles = 0, areaTriangles = 0;
+        //int quadrats = 0, cercles = 0, triangles = 0, 
+        int total = 0;
+        //double areaQuadrats = 0, areaCercles = 0, areaTriangles = 0;
         double areaAcumulada = 0, mida;
         int tipus, numFig = 1;
         String informe = "";
         NumberFormat nf = DecimalFormat.getNumberInstance(new Locale("ca", "es"));
         nf.setMaximumFractionDigits(2);
+        
+        int comptadorFigures[] = new int[3];
+        double comptadorArees[] = new double[3];
+        
         informe += "========================\n";
         for (Forma f : formes) {
             mida = f.getMida();
@@ -57,7 +62,12 @@ public class ColeccioFormes {
             informe += f.getNom();
             double area = f.getArea();
             informe += "\t mida - "+mida+" - area " + nf.format(area) + "\n";
-            areaAcumulada +=area;            
+            areaAcumulada +=area;      
+            
+            
+            comptadorFigures[tipus]++;
+            comptadorArees[tipus]+= area;
+            /*
             switch (tipus) {
                 case Forma.QUADRAT:
                     areaQuadrats += area;
@@ -71,7 +81,7 @@ public class ColeccioFormes {
                     areaTriangles += area;
                     triangles++;
                     break;
-            }
+            }*/
         } // end foreach forma
         // ---------------------- totalitzacions --------------------------
         informe += "========================\n";
@@ -81,13 +91,13 @@ public class ColeccioFormes {
             switch (n) {
 
                 case Forma.QUADRAT:
-                    informe += "Total Quadrats:" + quadrats + ", area final:" + nf.format(areaQuadrats) + "\n";
+                    informe += "Total Quadrats:" + comptadorFigures[n] + ", area final:" + nf.format(comptadorArees[n]) + "\n";
                     break;
                 case Forma.CERCLE:
-                    informe += "Total Cercles:" + cercles + ", area final:" + nf.format(areaCercles) + "\n";
+                    informe += "Total Cercles:" + comptadorFigures[n] + ", area final:" + nf.format(comptadorArees[n]) + "\n";
                     break;
                 case Forma.TRIANGLE_RECTANGLE_ISOSCELES:
-                    informe += "Total triangles:" + triangles + ", area final:" + nf.format(areaTriangles) + "\n";
+                    informe += "Total triangles:" + comptadorFigures[n] + ", area final:" + nf.format(comptadorArees[n]) + "\n";
                     break;
             }
             informe += "========================\n";
