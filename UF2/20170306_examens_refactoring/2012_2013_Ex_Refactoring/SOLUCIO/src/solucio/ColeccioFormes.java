@@ -53,28 +53,22 @@ public class ColeccioFormes {
             tipus = f.getTipusForma();
             total++;
             numFig++;
-            informe += "- Figura <" + numFig + ">: ";
+            informe += "- Figura <" + numFig + ">: ";            
+            informe += f.getNom();
+            double area = f.getArea();
+            informe += "\t mida - "+mida+" - area " + nf.format(area) + "\n";
+            areaAcumulada +=area;            
             switch (tipus) {
-
                 case Forma.QUADRAT:
-                    informe += "Quadrat";
-                    informe += "\t mida - "+mida+" - area " + nf.format(mida * mida) + "\n";
-                    areaAcumulada += mida * mida;
-                    areaQuadrats += mida * mida;
+                    areaQuadrats += area;
                     quadrats++;
                     break;
-                case Forma.CERCLE:
-                    informe += "Cercle";
-                    informe += "\t mida - "+mida+" - area " + nf.format(Math.PI * mida * mida) + "\n";
-                    areaAcumulada += Math.PI * mida * mida;
-                    areaCercles += Math.PI * mida * mida;
+                case Forma.CERCLE:  
+                    areaCercles += area;
                     cercles++;
                     break;
-                case Forma.TRIANGLE_RECTANGLE_ISOSCELES:
-                    informe += "Triangle";
-                    informe += "\t mida - "+mida+" - area " + nf.format(mida * mida / 2.0) + "\n";
-                    areaAcumulada += mida * mida / 2.0;
-                    areaTriangles += mida * mida / 2.0;
+                case Forma.TRIANGLE_RECTANGLE_ISOSCELES:    
+                    areaTriangles += area;
                     triangles++;
                     break;
             }

@@ -33,4 +33,23 @@ public class Forma {
         return tipusForma;
     }
 
+    public String getNom() {
+        switch (tipusForma) {
+            case Forma.QUADRAT:                         return "Quadrat";
+            case Forma.CERCLE:                          return "Cercle";
+            case Forma.TRIANGLE_RECTANGLE_ISOSCELES:    return "Triangle";
+            default:throw new RuntimeException("Tipus no existent.");
+        }
+    }
+
+    public double getArea() {
+        double area;
+        switch (this.tipusForma) {
+            case Forma.QUADRAT: return  mida*mida;                  
+            case Forma.CERCLE:  return (Math.PI * mida * mida);
+            case Forma.TRIANGLE_RECTANGLE_ISOSCELES: return mida * mida / 2.0; 
+            default:throw new RuntimeException("Tipus no existent.");
+        }
+    }
+
 }
