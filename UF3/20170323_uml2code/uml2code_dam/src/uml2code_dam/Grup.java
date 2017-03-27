@@ -30,9 +30,19 @@ public class Grup {
         return mCicle;
     }
 
-    public void setCicle(CicleFormatiu mCicle) {
-        this.mCicle = mCicle;
-        mCicle.afegirGrup(this);
+    public void setCicle(CicleFormatiu pCicle) {
+        
+        if(pCicle== this.mCicle) return; // evitem recusivitat
+        
+        CicleFormatiu cicleAnterior = this.mCicle;
+        this.mCicle = pCicle;
+        if( cicleAnterior!=null) {
+            // abans estava connectat a un altre cicle
+            cicleAnterior.esborrarGrup(this);
+        }
+        if(mCicle!=null) {
+            mCicle.afegirGrup(this);
+        }
     }
 
     

@@ -16,7 +16,44 @@ public class CicleFormatiuTest {
     
     public CicleFormatiuTest() {
     }
+    
+    @Test 
+        public void esborraGrup() {
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(2, "A");
+        
+        // anul·lant el grup del cicle del grup des de cicle
+        dam.addGrup(gr);
+        assertEquals( true ,dam.teGrup(gr));
+        dam.removeGrup(gr);
+        assertEquals( null ,gr.getCicle());
+        assertEquals( false ,dam.teGrup(gr));
+        
+        // anul·lant el grup del cicle del grup des de grup
+        dam.addGrup(gr);
+        assertEquals( true ,dam.teGrup(gr));
+        gr.setCicle(null);
+        assertEquals( null ,gr.getCicle());
+        assertEquals( false ,dam.teGrup(gr));
+        
+    }
 
+    @Test
+    public void testCanviarDeGrup(){
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(2, "A");
+        
+        dam.addGrup(gr);
+        assertEquals( dam ,gr.getCicle());
+        
+        // canvi de cicle
+        daw.addGrup(gr);
+        assertEquals( daw ,gr.getCicle());
+        assertEquals( true ,daw.teGrup(gr));
+        assertEquals( false ,dam.teGrup(gr));                            
+    }
+    
     @Test
     public void testGeneral() {
         

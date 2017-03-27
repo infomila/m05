@@ -17,6 +17,37 @@ public class GrupTest {
     public GrupTest() {
     }
 
+    
+    @Test 
+    public void esborrarGrup() {
+        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
+         
+        Grup segon = new Grup(dam, 2, "A");
+        
+        dam.esborrarGrup(segon);
+        
+        assertEquals( null,   segon.getCicle());
+        assertEquals( false , dam.teGrup(segon));
+        
+        
+    }
+    
+    @Test
+    public void testCanviGrups() {
+        
+        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenv.Aplicacions Web");
+        
+        Grup segon = new Grup(dam, 2, "A");
+        assertEquals( dam, segon.getCicle());
+        
+        //daw.afegirGrup(segon);
+        segon.setCicle(daw);
+        assertEquals( daw, segon.getCicle());
+        assertEquals( false, dam.teGrup(segon));
+        assertEquals( true, daw.teGrup(segon));
+                    
+    }    
     @Test
     public void testGeneral() {
         

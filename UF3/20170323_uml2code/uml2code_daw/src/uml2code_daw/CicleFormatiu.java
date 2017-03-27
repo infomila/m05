@@ -39,22 +39,34 @@ public class CicleFormatiu {
     public int getNumGrups() {
         return mGrups.size();
     }
-    
+    int i=0;
     public void addGrup(Grup pNou) {
         if(pNou==null) throw new RuntimeException("Grup null!!!");
         if(mGrups.contains(pNou)) return ;
-        
+
         mGrups.add(pNou);
         pNou.setCicle(this);
 
     }
     
     public boolean removeGrup(Grup pAEsborrar) {
-           return mGrups.remove(pAEsborrar);
+        if(pAEsborrar!=null) {
+            
+            boolean ok = mGrups.remove(pAEsborrar);
+            if(pAEsborrar.getCicle()==this) {
+                pAEsborrar.setCicle(null);
+            }
+            return ok;
+        }
+        return false;
     }
     
     public Grup removeGrupAt(int index) {
            return mGrups.remove(index);
     }
     
+    
+    public boolean teGrup(Grup pG) {
+        return mGrups.contains(pG);
+    }
 }

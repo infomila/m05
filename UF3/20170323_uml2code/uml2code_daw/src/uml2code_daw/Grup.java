@@ -23,9 +23,18 @@ public class Grup {
         return mCicle;
     }
 
-    public void setCicle(CicleFormatiu mCicle) {
-        this.mCicle = mCicle;
-        mCicle.addGrup(this);
+    public void setCicle(CicleFormatiu pCicle) {
+        System.out.println("setCicle"+pCicle);
+        if(this.mCicle==pCicle) return; //res a fer !
+        
+        CicleFormatiu oldMCicle = this.mCicle;
+        this.mCicle = pCicle;
+        if(oldMCicle!=null) {
+            System.out.println("esborrat...");
+            oldMCicle.removeGrup(this);      
+        }  
+        
+        if(this.mCicle!=null) this.mCicle.addGrup(this);
     }
 
     public int getCurs() {
@@ -36,7 +45,7 @@ public class Grup {
         return subgrup;
     }
 
-    
+    /*
     
     @Override
     public int hashCode() {
@@ -63,7 +72,7 @@ public class Grup {
         }
         return true;
     }
-    
+    */
     
     
     

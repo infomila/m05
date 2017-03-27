@@ -29,4 +29,23 @@ public class GrupTest {
         
     }
  
+    @Test
+    public void testCanviarDeGrup(){
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(2, "A");
+        
+        dam.addGrup(gr);        
+        assertEquals( dam ,gr.getCicle());
+        
+        // canvi de cicle
+        gr.setCicle(daw);
+        assertEquals( daw ,gr.getCicle());
+        assertEquals( true ,daw.teGrup(gr));
+        assertEquals( false ,dam.teGrup(gr));
+        
+        
+        
+        
+    }
 }

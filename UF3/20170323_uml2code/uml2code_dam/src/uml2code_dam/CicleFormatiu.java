@@ -57,8 +57,18 @@ public class CicleFormatiu {
     public Grup esborrarGrup(int pIndex) {
         return mGrups.remove(pIndex);
     }
+    
     public boolean esborrarGrup(Grup pGrupAEsborrar) {
-        return mGrups.remove(pGrupAEsborrar);
+        
+        boolean esborrat = mGrups.remove(pGrupAEsborrar);
+        
+        //Només esborrar la referència del grup si nosaltres
+        // som el seu cicle formatiu
+        if(pGrupAEsborrar.getCicle()==this) {
+            pGrupAEsborrar.setCicle(null);
+        }
+        return esborrat;
+        
     }
     //--------------------------------------------
 
@@ -78,6 +88,10 @@ public class CicleFormatiu {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    Object teGrup(Grup segon) {
+        return mGrups.contains(segon);
     }
 
 }

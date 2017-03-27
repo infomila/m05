@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uml2code_dam;
 
 import java.util.Iterator;
@@ -18,6 +13,23 @@ public class CicleFormatiuTest {
     public CicleFormatiuTest() {
     }
 
+    
+    @Test
+    public void testCanviGrups() {
+        
+        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenv.Aplicacions Web");
+        
+        Grup segon = new Grup(dam, 2, "A");
+        assertEquals( dam, segon.getCicle());
+        
+        daw.afegirGrup(segon);
+        assertEquals( daw, segon.getCicle());
+        assertEquals( false, dam.teGrup(segon));
+        assertEquals( true, daw.teGrup(segon));
+                    
+    }
+    
     @Test
     public void testGeneral() {
         
