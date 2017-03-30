@@ -9,12 +9,13 @@ import java.util.Objects;
  */
 public class Grup {
     private CicleFormatiu mCicle;
-    private int curs;
-    private String subgrup;
+    private int mCurs;
+    private String mSubgrup;
 
-    public Grup(int curs, String subgrup) {
-        this.curs = curs;
-        this.subgrup = subgrup;
+    public Grup(CicleFormatiu cicle, int curs, String subgrup) {
+        setCicle(cicle);
+        this.mCurs = curs;
+        this.mSubgrup = subgrup;
     }
     
     
@@ -25,24 +26,30 @@ public class Grup {
 
     public void setCicle(CicleFormatiu pCicle) {
         System.out.println("setCicle"+pCicle);
+        
+        // IMPORTANT: trenquem la recursivitat quan detectem que es vol 
+        //            assignar un cicle que ja és el nostre        
         if(this.mCicle==pCicle) return; //res a fer !
         
         CicleFormatiu oldMCicle = this.mCicle;
+        // Important, canviar el cicle abans de donar-se de baixa del vell.
+        // Ens evita caure en recursivitat de nou.
         this.mCicle = pCicle;
         if(oldMCicle!=null) {
             System.out.println("esborrat...");
             oldMCicle.removeGrup(this);      
-        }  
+        }
         
+        // afegir el grup només si el cicle no és null
         if(this.mCicle!=null) this.mCicle.addGrup(this);
     }
 
     public int getCurs() {
-        return curs;
+        return mCurs;
     }
 
     public String getSubgrup() {
-        return subgrup;
+        return mSubgrup;
     }
 
     /*
@@ -50,8 +57,8 @@ public class Grup {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 19 * hash + this.curs;
-        hash = 19 * hash + Objects.hashCode(this.subgrup);
+        hash = 19 * hash + this.mCurs;
+        hash = 19 * hash + Objects.hashCode(this.mSubgrup);
         return hash;
     }
 
@@ -64,10 +71,10 @@ public class Grup {
             return false;
         }
         final Grup other = (Grup) obj;
-        if (this.curs != other.curs) {
+        if (this.mCurs != other.mCurs) {
             return false;
         }
-        if (!Objects.equals(this.subgrup, other.subgrup)) {
+        if (!Objects.equals(this.mSubgrup, other.mSubgrup)) {
             return false;
         }
         return true;

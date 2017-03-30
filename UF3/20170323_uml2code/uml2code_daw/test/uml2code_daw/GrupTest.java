@@ -20,9 +20,9 @@ public class GrupTest {
     @Test
     public void testGeneral() {
         CicleFormatiu cf = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
-        Grup gr = new Grup(2, "A");
+        Grup gr = new Grup(cf, 2, "A");
         
-        gr.setCicle(cf);
+        //gr.setCicle(cf);
         
         
         assertEquals( gr, cf.getGrup(0)  );
@@ -33,9 +33,9 @@ public class GrupTest {
     public void testCanviarDeGrup(){
         CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
         CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
-        Grup gr = new Grup(2, "A");
+        Grup gr = new Grup(dam, 2, "A");
         
-        dam.addGrup(gr);        
+        //dam.addGrup(gr);        
         assertEquals( dam ,gr.getCicle());
         
         // canvi de cicle
@@ -47,5 +47,21 @@ public class GrupTest {
         
         
         
+    }
+
+    @Test
+    public void testGetCicle() {
+    }
+
+    @Test
+    public void testSetCicle() {
+    }
+
+    @Test
+    public void testGetCurs() {
+    }
+
+    @Test
+    public void testGetSubgrup() {
     }
 }

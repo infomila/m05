@@ -20,10 +20,10 @@ public class CicleFormatiuTest {
     @Test 
         public void esborraGrup() {
         CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
-        Grup gr = new Grup(2, "A");
+        Grup gr = new Grup(dam, 2, "A");
         
         // anul·lant el grup del cicle del grup des de cicle
-        dam.addGrup(gr);
+        //dam.addGrup(gr);
         assertEquals( true ,dam.teGrup(gr));
         dam.removeGrup(gr);
         assertEquals( null ,gr.getCicle());
@@ -42,9 +42,9 @@ public class CicleFormatiuTest {
     public void testCanviarDeGrup(){
         CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
         CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
-        Grup gr = new Grup(2, "A");
+        Grup gr = new Grup(dam, 2, "A");
         
-        dam.addGrup(gr);
+        //dam.addGrup(gr);
         assertEquals( dam ,gr.getCicle());
         
         // canvi de cicle
@@ -58,9 +58,11 @@ public class CicleFormatiuTest {
     public void testGeneral() {
         
         CicleFormatiu cf = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
-        Grup gr = new Grup(2, "A");
-        
         assertEquals( 0, cf.getNumGrups() );
+        
+        Grup gr = new Grup(cf, 2, "A");
+        
+        
         
         cf.addGrup(gr);
 
@@ -79,8 +81,8 @@ public class CicleFormatiuTest {
         assertEquals("A",  cf.getGrup(0).getSubgrup());
         assertEquals( 1 , cf.getNumGrups() );
         
-        boolean esborrat = cf.removeGrup(new Grup(2, "KAKA"));
-        assertEquals(false, esborrat);
+        boolean esborrat = cf.removeGrup(new Grup(cf, 2, "KAKA"));
+        assertEquals(true, esborrat);
         
         esborrat = cf.removeGrup(gr);
         assertEquals(true, esborrat);
