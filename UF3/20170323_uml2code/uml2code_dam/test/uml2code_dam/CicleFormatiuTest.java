@@ -1,6 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package uml2code_dam;
 
-import java.util.Iterator;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,50 +16,78 @@ public class CicleFormatiuTest {
     
     public CicleFormatiuTest() {
     }
-
     
+    @Test 
+        public void esborraGrup() {
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(dam, 2, "A");
+        
+        // anul·lant el grup del cicle del grup des de cicle
+        //dam.addGrup(gr);
+        assertEquals( true ,dam.teGrup(gr));
+        dam.removeGrup(gr);
+        assertEquals( null ,gr.getCicle());
+        assertEquals( false ,dam.teGrup(gr));
+        
+        // anul·lant el grup del cicle del grup des de grup
+        dam.addGrup(gr);
+        assertEquals( true ,dam.teGrup(gr));
+        gr.setCicle(null);
+        assertEquals( null ,gr.getCicle());
+        assertEquals( false ,dam.teGrup(gr));
+        
+    }
+
     @Test
-    public void testCanviGrups() {
+    public void testCanviarDeGrup(){
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(dam, 2, "A");
         
-        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
-        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenv.Aplicacions Web");
+        //dam.addGrup(gr);
+        assertEquals( dam ,gr.getCicle());
         
-        Grup segon = new Grup(dam, 2, "A");
-        assertEquals( dam, segon.getCicle());
-        
-        daw.afegirGrup(segon);
-        assertEquals( daw, segon.getCicle());
-        assertEquals( false, dam.teGrup(segon));
-        assertEquals( true, daw.teGrup(segon));
-                    
+        // canvi de cicle
+        daw.addGrup(gr);
+        assertEquals( daw ,gr.getCicle());
+        assertEquals( true ,daw.teGrup(gr));
+        assertEquals( false ,dam.teGrup(gr));                            
     }
     
     @Test
     public void testGeneral() {
         
-        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
+        CicleFormatiu cf = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        assertEquals( 0, cf.getNumGrups() );
         
-        Grup segon = new Grup(dam, 2, "A");
-                
-        //dam.afegirGrup(segon);
-        
-        //----------------------------------
-        
-        assertEquals( dam, segon.getCicle());
-        //-----------------------------------
+        Grup gr = new Grup(cf, 2, "A");
         
         
-        assertEquals( 1 , dam.getNumGrups() );
-        assertEquals( segon, dam.getGrup(0));
-        Iterator<Grup> it = dam.getIteratorGrup();
-        while(it.hasNext()){
-            assertEquals( segon,it.next());
-        }
-        assertEquals( true,dam.esborrarGrup(new Grup(dam, 3, "C")));
-        assertEquals( true,dam.esborrarGrup(segon));
-        assertEquals( 0 , dam.getNumGrups() );
+        
+        cf.addGrup(gr);
+
+        try {
+            cf.addGrup(null);
+            fail("error");
+        } catch(Exception ex) {  } 
+        
+        
+        //------------------------------
+        
+        assertEquals( cf, gr.getCicle() );
+        
+        
+        assertEquals(2,  cf.getGrup(0).getCurs() );
+        assertEquals("A",  cf.getGrup(0).getSubgrup());
+        assertEquals( 1 , cf.getNumGrups() );
+        
+        boolean esborrat = cf.removeGrup(new Grup(cf, 2, "KAKA"));
+        assertEquals(true, esborrat);
+        
+        esborrat = cf.removeGrup(gr);
+        assertEquals(true, esborrat);
+        assertEquals( 0 , cf.getNumGrups());
         
     }
- 
-    
+
 }

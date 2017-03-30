@@ -17,50 +17,51 @@ public class GrupTest {
     public GrupTest() {
     }
 
-    
-    @Test 
-    public void esborrarGrup() {
-        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
-         
-        Grup segon = new Grup(dam, 2, "A");
-        
-        dam.esborrarGrup(segon);
-        
-        assertEquals( null,   segon.getCicle());
-        assertEquals( false , dam.teGrup(segon));
-        
-        
-    }
-    
-    @Test
-    public void testCanviGrups() {
-        
-        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
-        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenv.Aplicacions Web");
-        
-        Grup segon = new Grup(dam, 2, "A");
-        assertEquals( dam, segon.getCicle());
-        
-        //daw.afegirGrup(segon);
-        segon.setCicle(daw);
-        assertEquals( daw, segon.getCicle());
-        assertEquals( false, dam.teGrup(segon));
-        assertEquals( true, daw.teGrup(segon));
-                    
-    }    
     @Test
     public void testGeneral() {
+        CicleFormatiu cf = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        Grup gr = new Grup(cf, 2, "A");
         
-        CicleFormatiu dam = new CicleFormatiu("ICB0", "Desenv.Aplicacions Multiplataforma");
-
-        Grup segon = new Grup(dam , 2, "A");
+        //gr.setCicle(cf);
         
-        //segon.setCicle(dam);
         
-        assertEquals( dam, segon.getCicle());
-        
-        assertEquals( segon , dam.getGrup(0));
+        assertEquals( gr, cf.getGrup(0)  );
         
     }
  
+    @Test
+    public void testCanviarDeGrup(){
+        CicleFormatiu daw = new CicleFormatiu("ICC0", "Desenvolupament d'Aplicacions Web");
+        CicleFormatiu dam = new CicleFormatiu("ICCB", "Desenvolupament d'Aplicacions Multi.");
+        Grup gr = new Grup(dam, 2, "A");
+        
+        //dam.addGrup(gr);        
+        assertEquals( dam ,gr.getCicle());
+        
+        // canvi de cicle
+        gr.setCicle(daw);
+        assertEquals( daw ,gr.getCicle());
+        assertEquals( true ,daw.teGrup(gr));
+        assertEquals( false ,dam.teGrup(gr));
+        
+        
+        
+        
+    }
+
+    @Test
+    public void testGetCicle() {
+    }
+
+    @Test
+    public void testSetCicle() {
+    }
+
+    @Test
+    public void testGetCurs() {
+    }
+
+    @Test
+    public void testGetSubgrup() {
+    }
 }

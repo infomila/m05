@@ -38,10 +38,10 @@ public class Grup {
         this.mCicle = pCicle;
         if( cicleAnterior!=null) {
             // abans estava connectat a un altre cicle
-            cicleAnterior.esborrarGrup(this);
+            cicleAnterior.removeGrup(this);
         }
         if(mCicle!=null) {
-            mCicle.afegirGrup(this);
+            mCicle.addGrup(this);
         }
     }
 
