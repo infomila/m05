@@ -14,14 +14,14 @@ public class Persona {
     
     private static int _totalEmpleats;
     
-    private String  mDNI;
+    private String  mNIF;
     private String  mNom;
     private String  mCognom1,mCognom2;
     private Date    mDataNaix;
     private Sexe    mSexe;
 
-    public Persona(String mDNI, String mNom, String mCognom1, String mCognom2, Date mDataNaix, Sexe mSexe) {
-        this.mDNI = mDNI;
+    public Persona(String mNIF, String mNom, String mCognom1, String mCognom2, Date mDataNaix, Sexe mSexe) {
+        this.mNIF = mNIF;
         this.mNom = mNom;
         this.mCognom1 = mCognom1;
         this.mCognom2 = mCognom2;
@@ -37,12 +37,12 @@ public class Persona {
         Persona._totalEmpleats = _totalEmpleats;
     }
 
-    public String getmDNI() {
-        return mDNI;
+    public String getNIF() {
+        return mNIF;
     }
 
-    public void setmDNI(String mDNI) {
-        this.mDNI = mDNI;
+    public void setNIF(String NIF) {
+        this.mNIF = NIF;
     }
 
     public String getmNom() {

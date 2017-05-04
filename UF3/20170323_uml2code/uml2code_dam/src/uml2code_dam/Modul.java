@@ -1,6 +1,7 @@
 package uml2code_dam;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,8 @@ public class Modul {
         private String mNom;
         private int mHores;
         private Modul mModul;
-
+        private List<Resultat> mResultats = new ArrayList<Resultat>();
+    
         public UF(Modul pModul, int mCodi, String mNom, int mHores) {
             this.mModul = pModul;
             this.mCodi = mCodi;
@@ -31,6 +33,28 @@ public class Modul {
             
             if(!mModul.addUF(this)) throw new RuntimeException("REPE");
         }
+        
+
+
+        //---------------------------------------------------------------
+        // Mètodes per encapsular la lista de resultats
+        //---------------------------------------------------------------
+        public int getNumResultats(){
+            return mResultats.size();
+        }
+        public Resultat getResultat(int index) {
+            return mResultats.get(index);
+        }
+        public void addResultat( Resultat nou ) {
+            // ??
+            if(!nou.getUF().equals(this)) throw new RuntimeException("Me la estas liando");
+
+            if(!mResultats.contains(nou)) { // equals ? està programat ?
+                mResultats.add(nou);
+            }
+        }
+        //---------------------------------------------------------------
+
         
 
         public Modul getModul() {
@@ -51,8 +75,9 @@ public class Modul {
 
         @Override
         public int hashCode() {
-            int hash = 5;
-            hash = 53 * hash + this.mCodi;
+            int hash = 7;
+            hash = 79 * hash + this.mCodi;
+            hash = 79 * hash + Objects.hashCode(this.mModul);
             return hash;
         }
 
@@ -68,8 +93,31 @@ public class Modul {
             if (this.mCodi != other.mCodi) {
                 return false;
             }
+            if (!Objects.equals(this.mModul, other.mModul)) {
+                return false;
+            }
             return true;
         }
+
+        Resultat getResultat(String NIF, int curs) {            
+            for(Resultat r:mResultats) {
+                if(r.getAlumne().getNIF().equals(NIF) && 
+                        r.getCurs()==curs){
+                    return r;
+                }
+            }
+            return null;
+        }
+        List<Resultat> getResultat(String NIF) {
+            ArrayList<Resultat> resultats = new ArrayList<Resultat>();
+            for(Resultat r:mResultats) {
+                if(r.getAlumne().getNIF().equals(NIF)){
+                    resultats.add(r);
+                }
+            }
+            return resultats;
+        }
+        
 
     }
 
@@ -134,5 +182,33 @@ public class Modul {
     public String getNom() {
         return mNom;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + Objects.hashCode(this.mCicle);
+        hash = 37 * hash + this.mCodi;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Modul other = (Modul) obj;
+        if (!Objects.equals(this.mCicle, other.mCicle)) {
+            return false;
+        }
+        if (this.mCodi != other.mCodi) {
+            return false;
+        }
+        return true;
+    }
+ 
+    
 
 }

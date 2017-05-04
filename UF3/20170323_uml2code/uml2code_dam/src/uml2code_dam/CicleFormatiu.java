@@ -8,6 +8,7 @@ package uml2code_dam;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -135,4 +136,29 @@ public class CicleFormatiu {
     public boolean teModul(Modul pM) {
         return mModuls.contains(pM);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.mCodi);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CicleFormatiu other = (CicleFormatiu) obj;
+        if (!Objects.equals(this.mCodi, other.mCodi)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
 }
